@@ -18,7 +18,8 @@ And then, if using Laravel 5.1, include the service provider within `config/app.
 
 ```php
 'providers' => [
-    'Laravelista\Syndra\SyndraServiceProvider'
+    ...
+    Laravelista\Syndra\SyndraServiceProvider::class
 ];
 ```
 
@@ -26,7 +27,8 @@ And if you want you can add a facade alias to this same file at the bottom:
 
 ```php
 'aliases' => [
-    'Syndra' => 'Laravelista\Syndra\Facades\Syndra'
+    ...
+    'Syndra' => Laravelista\Syndra\Facades\Syndra::class
 ];
 ```
 
