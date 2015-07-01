@@ -15,4 +15,15 @@
             <directory suffix=".php">./tests/</directory>
         </testsuite>
     </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./</directory>
+            <exclude>
+                <directory suffix=".php">./src/Facades</directory>
+                <directory suffix=".php">./vendor</directory>
+                <directory suffix=".php">./tests</directory>
+                <file>./src/SyndraServiceProvider.php</file>
+            </exclude>
+        </whitelist>
+    </filter>
 </phpunit>
