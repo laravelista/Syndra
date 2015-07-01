@@ -4,6 +4,8 @@
 
 Common JSON responses for an API built with Laravel 5.1.
 
+> This package was inspired by a series from Laracasts [Incremental APIs](https://laracasts.com/series/incremental-api-development).
+
 ## Installation
 
 First, pull in the package through Composer.
