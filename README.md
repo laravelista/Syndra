@@ -30,7 +30,7 @@ And if you want you can add a facade alias to this same file at the bottom:
 
 ## Usage
 
-Coming soon...
+Coming soon....
 
 ## API
 
