@@ -1,6 +1,6 @@
 # Syndra
 
-[![Build Status](https://travis-ci.org/laravelista/Syndra.svg?branch=1.0.0)](https://travis-ci.org/laravelista/Syndra) 
+[![Build Status](https://travis-ci.org/laravelista/Syndra.svg?branch=1.0.0)](https://travis-ci.org/laravelista/Syndra) [![Latest Stable Version](https://poser.pugx.org/laravelista/syndra/v/stable)](https://packagist.org/packages/laravelista/syndra) [![Total Downloads](https://poser.pugx.org/laravelista/syndra/downloads)](https://packagist.org/packages/laravelista/syndra) [![Latest Unstable Version](https://poser.pugx.org/laravelista/syndra/v/unstable)](https://packagist.org/packages/laravelista/syndra) [![License](https://poser.pugx.org/laravelista/syndra/license)](https://packagist.org/packages/laravelista/syndra)
 
 Common JSON responses for an API built with Laravel 5.1.
 
