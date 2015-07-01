@@ -1,0 +1,20 @@
+{
+  "name": "laravelista/syndra",
+  "description": "Common JSON responses for an API built with Laravel.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mario Basic",
+      "email": "mario.basic@outlook.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Laravelista\\Syndra\\": "src"
+    }
+  },
+  "require": {
+    "illuminate/support": "^5.1",
+    "illuminate/http": "^5.1"
+  }
+}
