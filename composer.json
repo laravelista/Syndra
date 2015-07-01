@@ -2,6 +2,11 @@
   "name": "laravelista/syndra",
   "description": "Common JSON responses for an API built with Laravel.",
   "license": "MIT",
+  "keywords": [
+    "laravel",
+    "api",
+    "json"
+  ],
   "authors": [
     {
       "name": "Mario Basic",
