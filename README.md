@@ -1,5 +1,7 @@
 # Syndra
 
+[![Build Status](https://travis-ci.org/laravelista/Syndra.svg?branch=1.0.0)](https://travis-ci.org/laravelista/Syndra) 
+
 Common JSON responses for an API built with Laravel 5.1.
 
 ## Installation
