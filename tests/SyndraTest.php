@@ -3,7 +3,8 @@
 use Laravelista\Syndra\Syndra;
 use PHPUnit_Framework_TestCase;
 
-class SyndraTest extends PHPUnit_Framework_TestCase {
+class SyndraTest extends PHPUnit_Framework_TestCase
+{
 
     protected $syndra;
 

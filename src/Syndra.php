@@ -3,7 +3,8 @@
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
-class Syndra {
+class Syndra
+{
 
     /**
      * Default is (200).
@@ -29,7 +30,7 @@ class Syndra {
      * @param array $headers
      * @return $this
      */
-    public function setHeaders($headers)
+    public function setHeaders(array $headers)
     {
         $this->headers = $headers;
 
@@ -58,10 +59,10 @@ class Syndra {
     /**
      * Responds with JSON, status code and headers.
      *
-     * @param $data
-     * @return \Illuminate\Http\JsonResponse
+     * @param array $data
+     * @return JsonResponse
      */
-    public function respond($data)
+    public function respond(array $data)
     {
         return new JsonResponse($data, $this->getStatusCode(), $this->getHeaders());
     }
@@ -181,7 +182,7 @@ class Syndra {
     }
 
     /**
-     * Use this when the user needs to be authorized to do something.
+     * Use this when the user needs to be authorized to do something (401).
      *
      * @param $message
      * @return mixed

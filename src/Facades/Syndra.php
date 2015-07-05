@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class Syndra extends Facade {
+class Syndra extends Facade
+{
 
     protected static function getFacadeAccessor()
     {

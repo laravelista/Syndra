@@ -2,7 +2,8 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class SyndraServiceProvider extends ServiceProvider {
+class SyndraServiceProvider extends ServiceProvider
+{
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -18,8 +19,7 @@ class SyndraServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app->singleton('syndra', function ()
-        {
+        $this->app->singleton('syndra', function () {
             return new Syndra();
         });
     }
