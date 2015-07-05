@@ -30,34 +30,6 @@ You are probably interested in what this package can do:
  - It has 100% code coverage with PHPUnit
  - It comes Laravel 5.1 ready and with a Facade `Syndra` for easy use
 
-## Installation
-
-First, pull in the package through Composer.
-
-```js
-"require": {
-    "laravelista/syndra": "~1.0"
-}
-```
-
-And then, if using Laravel 5.1, include the service provider within `config/app.php`.
-
-```php
-'providers' => [
-    ...
-    Laravelista\Syndra\SyndraServiceProvider::class
-];
-```
-
-And if you want you can add a facade alias to this same file at the bottom:
-
-```php
-'aliases' => [
-    ...
-    'Syndra' => Laravelista\Syndra\Facades\Syndra::class
-];
-```
-
 ## Documentation
 
 See [wiki](https://github.com/laravelista/Syndra/wiki) for documenation.
