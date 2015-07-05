@@ -14,9 +14,11 @@ I've built this package out of necessity. At the same time I was coding 3 simila
  
 My first thought was that I can just create a package out of that `ApiController` and be done with it, but I soon realized that I also wanted to be able to use those responses in other parts of the application, not just in controllers. You could have a global exception catcher for when the model is not found or if the validation fails. **Wouldn't  it  be nice if you could use the same responses everywhere.**
  
-Then I tried writing the package as a trait. I read somewhere that traits are meant  to be stateless so I quickly abandoned that approach. And then it hit me. Why not just write a simple class that can be  easily extended :) That is the story how *Syndra was created.*  
+Then I tried writing the package as a trait. I read somewhere that traits are meant  to be stateless so I quickly abandoned that approach. And then it hit me. Why not just write a simple class that can be  easily extended :) 
+
+This is the story how *Syndra was created.*  
  
-Thanks for reading.
+**Thanks for reading.**
  
 ## Features
  
