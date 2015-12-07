@@ -1,8 +1,42 @@
-<?php namespace Laravelista\Syndra;
+<?php
+/**
+ * Class Syndra
+ *
+ * @author Mario Basic
+ */
+
+namespace Laravelista\Syndra;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
+/**
+ * Class Syndra
+ *
+ * This package returns generic (predefined) JSON responses for common API actions like creating,
+ * updating, destroying, indexing and showing a resource.
+ *
+ * It can be easily extended and modified.
+ *
+ * It can be used anywhere in your application (controllers, routes etc...)
+ *
+ * ### Examples
+ *
+ * #### OK Response
+ *
+ * <code>
+ * return $this->syndra->respondOk('post_deleted');
+ * </code>
+ *
+ * #### Respond with a JSON validation error.
+ *
+ * <code>
+ * return Syndra::respondValidationError($errors);
+ * </code>
+ *
+ * @see  ...
+ * @link https://github.com/laravelista/Syndra/wiki
+ */
 class Syndra
 {
 
@@ -192,5 +226,4 @@ class Syndra
         return $this->setStatusCode(Response::HTTP_UNAUTHORIZED)
             ->respondWithError($message);
     }
-
 }
