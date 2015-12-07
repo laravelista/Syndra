@@ -131,6 +131,7 @@ class Syndra
         ]);
     }
 
+
     /**
      * Use this to respond with a message (200).
      *
@@ -167,6 +168,31 @@ class Syndra
             ->respondWithMessage($message);
     }
 
+    
+    /**
+     * Use this when the user needs to be authorized to do something (401).
+     *
+     * @param $message
+     * @return mixed
+     */
+    public function respondUnauthorized($message='Unauthorized')
+    {
+        return $this->setStatusCode(Response::HTTP_UNAUTHORIZED)
+            ->respondWithError($message);
+    }
+
+    /**
+     * Use this when the user does not have permission to do something (403).
+     *
+     * @param string $message
+     * @return mixed
+     */
+    public function respondForbidden($message='Forbidden')
+    {
+        return $this->setStatusCode(Response::HTTP_FORBIDDEN)
+            ->respondWithError($message);
+    }
+    
     /**
      * Use this when a resource is not found (404).
      *
@@ -178,14 +204,27 @@ class Syndra
         return $this->setStatusCode(Response::HTTP_NOT_FOUND)
             ->respondWithError($message);
     }
-
+    
+    /**
+     * Use this when the validation fails (422).
+     *
+     * @param string $message
+     * @return mixed
+     */
+    public function respondValidationError($message='Validation Error')
+    {
+        return $this->setStatusCode(Response::HTTP_UNPROCESSABLE_ENTITY)
+            ->respondWithError($message);
+    }
+    
+    
     /**
      * Use this for general server errors (500).
      *
      * @param string $message
      * @return mixed
      */
-    public function respondInternalError($message='Internal Error=')
+    public function respondInternalError($message='Internal Error')
     {
         return $this->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR)
             ->respondWithError($message);
@@ -202,40 +241,5 @@ class Syndra
         return $this->setStatusCode(Response::HTTP_NOT_IMPLEMENTED)
             ->respondWithError($message);
     }
-
-    /**
-     * Use this when the validation fails (422).
-     *
-     * @param string $message
-     * @return mixed
-     */
-    public function respondValidationError($message='Validation Error')
-    {
-        return $this->setStatusCode(Response::HTTP_UNPROCESSABLE_ENTITY)
-            ->respondWithError($message);
-    }
-
-    /**
-     * Use this when the user does not have permission to do something (403).
-     *
-     * @param string $message
-     * @return mixed
-     */
-    public function respondForbidden($message='Forbidden')
-    {
-        return $this->setStatusCode(Response::HTTP_FORBIDDEN)
-            ->respondWithError($message);
-    }
-
-    /**
-     * Use this when the user needs to be authorized to do something (401).
-     *
-     * @param $message
-     * @return mixed
-     */
-    public function respondUnauthorized($message='Unauthorized')
-    {
-        return $this->setStatusCode(Response::HTTP_UNAUTHORIZED)
-            ->respondWithError($message);
-    }
+    
 }
