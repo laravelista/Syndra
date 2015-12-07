@@ -107,7 +107,7 @@ class Syndra
      * @param $message
      * @return \Illuminate\Http\JsonResponse
      */
-    public function respondWithMessage($message)
+    public function respondWithMessage($message='OK')
     {
         return $this->respond([
             'message'     => $message,
@@ -121,7 +121,7 @@ class Syndra
      * @param $message
      * @return \Illuminate\Http\JsonResponse
      */
-    public function respondWithError($message)
+    public function respondWithError($message='Error')
     {
         return $this->respond([
             'error' => [
@@ -137,7 +137,7 @@ class Syndra
      * @param $message
      * @return \Illuminate\Http\JsonResponse
      */
-    public function respondOk($message)
+    public function respondOk($message='OK')
     {
         return $this->setStatusCode(Response::HTTP_OK)
             ->respondWithMessage($message);
@@ -149,7 +149,7 @@ class Syndra
      * @param $message
      * @return mixed
      */
-    public function respondCreated($message)
+    public function respondCreated($message='Created')
     {
         return $this->setStatusCode(Response::HTTP_CREATED)
             ->respondWithMessage($message);
@@ -161,7 +161,7 @@ class Syndra
      * @param $message
      * @return mixed
      */
-    public function respondUpdated($message)
+    public function respondUpdated($message='Updated')
     {
         return $this->setStatusCode(Response::HTTP_ACCEPTED)
             ->respondWithMessage($message);
@@ -173,7 +173,7 @@ class Syndra
      * @param string $message
      * @return mixed
      */
-    public function respondNotFound($message)
+    public function respondNotFound($message='Not Found')
     {
         return $this->setStatusCode(Response::HTTP_NOT_FOUND)
             ->respondWithError($message);
@@ -185,7 +185,7 @@ class Syndra
      * @param string $message
      * @return mixed
      */
-    public function respondInternalError($message)
+    public function respondInternalError($message='Internal Error=')
     {
         return $this->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR)
             ->respondWithError($message);
@@ -197,7 +197,7 @@ class Syndra
      * @param string $message
      * @return mixed
      */
-    public function respondNotImplemented($message)
+    public function respondNotImplemented($message='Not Implemented')
     {
         return $this->setStatusCode(Response::HTTP_NOT_IMPLEMENTED)
             ->respondWithError($message);
@@ -209,7 +209,7 @@ class Syndra
      * @param string $message
      * @return mixed
      */
-    public function respondValidationError($message)
+    public function respondValidationError($message='Validation Error')
     {
         return $this->setStatusCode(Response::HTTP_UNPROCESSABLE_ENTITY)
             ->respondWithError($message);
@@ -221,7 +221,7 @@ class Syndra
      * @param string $message
      * @return mixed
      */
-    public function respondForbidden($message)
+    public function respondForbidden($message='Forbidden')
     {
         return $this->setStatusCode(Response::HTTP_FORBIDDEN)
             ->respondWithError($message);
@@ -233,7 +233,7 @@ class Syndra
      * @param $message
      * @return mixed
      */
-    public function respondUnauthorized($message)
+    public function respondUnauthorized($message='Unauthorized')
     {
         return $this->setStatusCode(Response::HTTP_UNAUTHORIZED)
             ->respondWithError($message);
