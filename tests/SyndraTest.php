@@ -158,6 +158,20 @@ class SyndraTest extends PHPUnit_Framework_TestCase
     }
 
     /** @test */
+    public function it_responds_with_not_implemented()
+    {
+        $response = $this->syndra->respondNotImplemented('something');
+
+        $this->assertInstanceOf('Illuminate\Http\JsonResponse', $response);
+
+        $this->assertEquals(501, $response->getStatusCode());
+
+        $this->assertEquals([], $this->syndra->getHeaders());
+
+        $this->assertEquals('{"error":{"message":"something","status_code":501}}', json_encode($response->getData()));
+    }
+
+    /** @test */
     public function it_responds_with_validation_error()
     {
         $response = $this->syndra->respondValidationError('something');
