@@ -158,6 +158,18 @@ class Syndra
     }
 
     /**
+     * Use this for HTTP not implemented errors (501).
+     *
+     * @param string $message
+     * @return mixed
+     */
+    public function respondNotImplemented($message)
+    {
+        return $this->setStatusCode(Response::HTTP_NOT_IMPLEMENTED)
+            ->respondWithError($message);
+    }
+
+    /**
      * Use this when the validation fails (422).
      *
      * @param string $message
