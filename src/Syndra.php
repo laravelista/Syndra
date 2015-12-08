@@ -105,13 +105,16 @@ class Syndra
      * Use this for responding with messages.
      *
      * @param $message
+     * @param array $data
      * @return \Illuminate\Http\JsonResponse
      */
-    public function respondWithMessage($message='OK')
+    public function respondWithMessage($message='OK', array $data = [])
     {
         return $this->respond([
+            'success'     => true,
             'message'     => $message,
-            'status_code' => $this->getStatusCode()
+            'status_code' => $this->getStatusCode(),
+            'data'        => $data
         ]);
     }
 
@@ -119,15 +122,18 @@ class Syndra
      * Use this for responding with error messages.
      *
      * @param $message
+     * @param array $data
      * @return \Illuminate\Http\JsonResponse
      */
-    public function respondWithError($message='Error')
+    public function respondWithError($message='Error', array $data = [])
     {
         return $this->respond([
+            'success'     => false,
             'error' => [
                 'message'     => $message,
                 'status_code' => $this->getStatusCode()
-            ]
+            ],
+            'data'        => $data
         ]);
     }
 
@@ -136,110 +142,118 @@ class Syndra
      * Use this to respond with a message (200).
      *
      * @param $message
+     * @param array $data
      * @return \Illuminate\Http\JsonResponse
      */
-    public function respondOk($message='OK')
+    public function respondOk($message='OK', array $data = [])
     {
         return $this->setStatusCode(Response::HTTP_OK)
-            ->respondWithMessage($message);
+            ->respondWithMessage($message, $data);
     }
 
     /**
      * Use this when a resource has been created (201).
      *
      * @param $message
+     * @param array $data
      * @return mixed
      */
-    public function respondCreated($message='Created')
+    public function respondCreated($message='Created', array $data = [])
     {
         return $this->setStatusCode(Response::HTTP_CREATED)
-            ->respondWithMessage($message);
+            ->respondWithMessage($message, $data);
     }
 
     /**
      * Use this when a resource has been updated (202).
      *
      * @param $message
+     * @param array $data
      * @return mixed
      */
-    public function respondUpdated($message='Updated')
+    public function respondUpdated($message='Updated', array $data = [])
     {
         return $this->setStatusCode(Response::HTTP_ACCEPTED)
-            ->respondWithMessage($message);
+            ->respondWithMessage($message, $data);
     }
 
-    
+
     /**
      * Use this when the user needs to be authorized to do something (401).
      *
      * @param $message
+     * @param array $data
      * @return mixed
      */
-    public function respondUnauthorized($message='Unauthorized')
+    public function respondUnauthorized($message='Unauthorized', array $data = [])
     {
         return $this->setStatusCode(Response::HTTP_UNAUTHORIZED)
-            ->respondWithError($message);
+            ->respondWithError($message, $data);
     }
 
     /**
      * Use this when the user does not have permission to do something (403).
      *
      * @param string $message
+     * @param array $data
      * @return mixed
      */
-    public function respondForbidden($message='Forbidden')
+    public function respondForbidden($message='Forbidden', array $data = [])
     {
         return $this->setStatusCode(Response::HTTP_FORBIDDEN)
-            ->respondWithError($message);
+            ->respondWithError($message, $data);
     }
-    
+
     /**
      * Use this when a resource is not found (404).
      *
      * @param string $message
+     * @param array $data
      * @return mixed
      */
-    public function respondNotFound($message='Not Found')
+    public function respondNotFound($message='Not Found', array $data = [])
     {
         return $this->setStatusCode(Response::HTTP_NOT_FOUND)
-            ->respondWithError($message);
+            ->respondWithError($message, $data);
     }
-    
+
     /**
      * Use this when the validation fails (422).
      *
      * @param string $message
+     * @param array $data
      * @return mixed
      */
-    public function respondValidationError($message='Validation Error')
+    public function respondValidationError($message='Validation Error', array $data = [])
     {
         return $this->setStatusCode(Response::HTTP_UNPROCESSABLE_ENTITY)
-            ->respondWithError($message);
+            ->respondWithError($message, $data);
     }
-    
-    
+
+
     /**
      * Use this for general server errors (500).
      *
      * @param string $message
+     * @param array $data
      * @return mixed
      */
-    public function respondInternalError($message='Internal Error')
+    public function respondInternalError($message='Internal Error', array $data = [])
     {
         return $this->setStatusCode(Response::HTTP_INTERNAL_SERVER_ERROR)
-            ->respondWithError($message);
+            ->respondWithError($message, $data);
     }
 
     /**
      * Use this for HTTP not implemented errors (501).
      *
      * @param string $message
+     * @param array $data
      * @return mixed
      */
-    public function respondNotImplemented($message='Not Implemented')
+    public function respondNotImplemented($message='Not Implemented', array $data = [])
     {
         return $this->setStatusCode(Response::HTTP_NOT_IMPLEMENTED)
-            ->respondWithError($message);
+            ->respondWithError($message, $data);
     }
-    
 }
