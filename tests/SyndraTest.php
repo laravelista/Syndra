@@ -84,7 +84,7 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->syndra->getHeaders());
 
-        $this->assertEquals('"success":false,{"error":{"message":"something","status_code":404},"data":[]}', json_encode($response->getData()));
+        $this->assertEquals('{"success":false,{"error":{"message":"something","status_code":404},"data":[]}', json_encode($response->getData()));
     }
 
     /** @test */
