@@ -70,7 +70,7 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->syndra->getHeaders());
 
-        $this->assertEquals('{"message":"something","status_code":200}', json_encode($response->getData()));
+        $this->assertEquals('{"success":true,"message":"something","status_code":200,"data":[]}', json_encode($response->getData()));
     }
 
     /** @test */
@@ -84,7 +84,7 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->syndra->getHeaders());
 
-        $this->assertEquals('{"error":{"message":"something","status_code":404}}', json_encode($response->getData()));
+        $this->assertEquals('"success":false,{"error":{"message":"something","status_code":404},"data":[]}', json_encode($response->getData()));
     }
 
     /** @test */
@@ -98,7 +98,7 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->syndra->getHeaders());
 
-        $this->assertEquals('{"message":"something","status_code":200}', json_encode($response->getData()));
+        $this->assertEquals('{"success":true,"message":"something","status_code":200,"data":[]}', json_encode($response->getData()));
     }
 
     /** @test */
@@ -112,7 +112,7 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->syndra->getHeaders());
 
-        $this->assertEquals('{"message":"something","status_code":201}', json_encode($response->getData()));
+        $this->assertEquals('{"success":true,"message":"something","status_code":201,"data":[]}', json_encode($response->getData()));
     }
 
     /** @test */
@@ -126,7 +126,7 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->syndra->getHeaders());
 
-        $this->assertEquals('{"message":"something","status_code":202}', json_encode($response->getData()));
+        $this->assertEquals('{"success":true,"message":"something","status_code":202,"data":[]}', json_encode($response->getData()));
     }
 
     /** @test */
@@ -140,7 +140,7 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->syndra->getHeaders());
 
-        $this->assertEquals('{"error":{"message":"something","status_code":404}}', json_encode($response->getData()));
+        $this->assertEquals('{"success":false,"error":{"message":"something","status_code":404},"data":[]}', json_encode($response->getData()));
     }
 
     /** @test */
@@ -154,7 +154,7 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->syndra->getHeaders());
 
-        $this->assertEquals('{"error":{"message":"something","status_code":500}}', json_encode($response->getData()));
+        $this->assertEquals('{"success":false,"error":{"message":"something","status_code":500},"data":[]}', json_encode($response->getData()));
     }
 
     /** @test */
@@ -168,7 +168,7 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->syndra->getHeaders());
 
-        $this->assertEquals('{"error":{"message":"something","status_code":501}}', json_encode($response->getData()));
+        $this->assertEquals('{"success":false,"error":{"message":"something","status_code":501},"data":[]}', json_encode($response->getData()));
     }
 
     /** @test */
@@ -182,7 +182,7 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->syndra->getHeaders());
 
-        $this->assertEquals('{"error":{"message":"something","status_code":422}}', json_encode($response->getData()));
+        $this->assertEquals('{"success":false,"error":{"message":"something","status_code":422},"data":[]}', json_encode($response->getData()));
     }
 
     /** @test */
@@ -196,7 +196,7 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         $this->assertEquals([], $this->syndra->getHeaders());
 
-        $this->assertEquals('{"error":{"message":"something","status_code":403}}', json_encode($response->getData()));
+        $this->assertEquals('{"success":false,"error":{"message":"something","status_code":403},"data":[]}', json_encode($response->getData()));
     }
 
     /** @test */
@@ -212,6 +212,6 @@ class SyndraTest extends PHPUnit_Framework_TestCase
 
         //var_dump(json_encode($response->getData()));
 
-        $this->assertEquals('{"error":{"message":"something","status_code":401}}', json_encode($response->getData()));
+        $this->assertEquals('{"success":false,"error":{"message":"something","status_code":401},"data":[]}', json_encode($response->getData()));
     }
 }
