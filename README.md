@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/laravelista/Syndra.svg?branch=1.0.0)](https://travis-ci.org/laravelista/Syndra) [![Latest Stable Version](https://poser.pugx.org/laravelista/syndra/v/stable)](https://packagist.org/packages/laravelista/syndra) [![Total Downloads](https://poser.pugx.org/laravelista/syndra/downloads)](https://packagist.org/packages/laravelista/syndra) [![Latest Unstable Version](https://poser.pugx.org/laravelista/syndra/v/unstable)](https://packagist.org/packages/laravelista/syndra) [![License](https://poser.pugx.org/laravelista/syndra/license)](https://packagist.org/packages/laravelista/syndra)
 
-Common JSON responses for an API built with Laravel 5.1.
+Common JSON responses for an API built with Laravel 5.2.
 
 > This package was inspired by a series from Laracasts [Incremental APIs](https://laracasts.com/series/incremental-api-development).
 
@@ -28,7 +28,7 @@ You are probably interested in what this package can do:
  - It can be easily extended and modified
  - It can be used anywhere in your application *(controllers, routes etc...)*
  - It has 100% code coverage with PHPUnit
- - It comes Laravel 5.1 ready and with a Facade `Syndra` for easy use
+ - It comes Laravel 5.2 ready and with a Facade `Syndra` for easy use
 
 ## Documentation
 
