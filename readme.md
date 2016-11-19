@@ -316,4 +316,4 @@ Syndra::setHeaders($headers)->respondWithMessage('Hello World!');
 
 Many thanks to:
 
-- [@delatbabel](https://github.com/delatbabel) for `notImplemented` method and default message values.
+- [@delatbabel](https://github.com/delatbabel) for `notImplemented` method and default message values
